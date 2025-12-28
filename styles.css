@@ -6,8 +6,8 @@
   --text:#0f172a;
   --muted:#475569;
   --border:#e2e8f0;
-  --accent:#2563eb;     /* azul profesional */
-  --accent2:#22c55e;    /* verde WhatsApp */
+  --accent:#2563eb;
+  --accent2:#22c55e;
 }
 
 body{
@@ -26,43 +26,58 @@ body{
 .hero{
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border-bottom: 1px solid var(--border);
-  padding: 34px 0 18px; /* menos altura */
+  padding: 36px 0 20px;
+  text-align: center;
 }
 
 h1{
-  margin: 0;
+  margin: 8px 0 0;
   font-size: clamp(34px, 4vw, 52px);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.6px;
 }
 
 .subtitle{
   max-width: 720px;
+  margin: 12px auto 0;
   line-height: 1.65;
   color:var(--muted);
-  margin: 10px 0 0;
 }
 
-.subtitle strong{ color: var(--text); }
+.subtitle strong{
+  color: var(--text);
+}
+
+.badge{
+  display:inline-block;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 13px;
+}
 
 .btn{
   display:inline-flex;
   align-items:center;
   gap:10px;
-  margin-top: 16px;
-  padding: 12px 16px;
+  margin-top: 18px;
+  padding: 12px 18px;
   background: var(--accent2);
   color:white;
   text-decoration:none;
-  border-radius: 12px;
+  border-radius: 14px;
   font-weight: 800;
-  box-shadow: 0 10px 18px rgba(34,197,94,.18);
-  border: 1px solid rgba(255,255,255,.2);
+  box-shadow: 0 10px 20px rgba(34,197,94,.2);
 }
 
-.btn:hover{ transform: translateY(-1px); }
+.btn:hover{
+  transform: translateY(-1px);
+}
 
 .section-title{
-  margin-top: 26px;
+  margin-top: 32px;
   font-size: 26px;
 }
 
@@ -70,7 +85,7 @@ h1{
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 @media (max-width: 900px){
@@ -79,10 +94,10 @@ h1{
 
 .card{
   background:var(--card);
-  padding: 18px;
-  border-radius: 16px;
+  padding: 20px;
+  border-radius: 18px;
   border: 1px solid var(--border);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 24px rgba(15,23,42,0.06);
 }
 
 .card h3{
@@ -93,7 +108,6 @@ h1{
 .card p{
   margin: 8px 0 10px;
   color: var(--muted);
-  line-height: 1.6;
 }
 
 .card ul{
@@ -101,17 +115,6 @@ h1{
   padding-left: 18px;
   line-height: 1.7;
   color: var(--muted);
-}
-
-.badge{
-  display:inline-block;
-  padding: 7px 10px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: white;
-  color: var(--muted);
-  font-weight: 700;
-  font-size: 13px;
 }
 
 .small{
@@ -129,7 +132,7 @@ h1{
 }
 
 .footer{
-  margin-top: 34px;
+  margin-top: 36px;
   padding: 18px 0;
   text-align:center;
   color:var(--muted);
