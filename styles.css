@@ -139,3 +139,15 @@ h1{
   border-top: 1px solid var(--border);
   background: #fff;
 }
+
+.logo{
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 20px rgba(15,23,42,0.06);
+}
