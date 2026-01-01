@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>DIEGOBIM | Especialista BIM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIEGOBIM</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER / HERO (fondo negro) -->
   <header class="hero">
-    <div class="container hero-content">
+    <div class="container hero-wrap">
 
-      <!-- LOGO -->
-      <div class="logo">
-        <img src="logo.png" alt="DIEGOBIM Logo">
+      <!-- Logo izquierda -->
+      <div class="hero-left">
+        <img class="brand-logo" src="logo.png" alt="Logo DIEGOBIM">
       </div>
 
-      <!-- TEXTO -->
-      <div class="hero-text">
-        <h1 class="brand">DIEGOBIM</h1>
-        <p class="name">Arq. Diego Villavicencio</p>
-        <p class="role">Especialista BIM</p>
+      <!-- Texto central -->
+      <div class="hero-center">
+        <h1 class="brand-title">DIEGOBIM</h1>
 
-        <a
-          class="btn-whatsapp"
-          href="https://wa.me/51902598128?text=Hola%20Diego,%20quisiera%20información%20sobre%20tus%20servicios%20BIM."
-          target="_blank"
-          rel="noopener"
-        >
+        <p class="brand-name">Arq. Diego Villavicencio</p>
+        <p class="brand-role">Especialista BIM</p>
+
+        <a class="btn-whatsapp" id="btnWhatsApp" href="#" target="_blank" rel="noopener">
           Consultar por WhatsApp
         </a>
       </div>
 
-      <!-- REDES -->
-      <div class="follow">
-        <span>REDES SOCIALES</span>
+      <!-- Redes derecha -->
+      <div class="hero-right">
+        <div class="social-box">
+          <div class="social-title">REDES SOCIALES</div>
 
-        <div class="social-icons">
-          <a href="https://www.facebook.com/ClasesdeRevitBIM" target="_blank">
-            <img src="icons/facebook.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com/diegofest/" target="_blank">
-            <img src="icons/instagram.png" alt="Instagram">
-          </a>
-          <a href="https://www.tiktok.com/@ingenierosx100" target="_blank">
-            <img src="icons/tiktok.png" alt="TikTok">
-          </a>
-          <a href="https://www.youtube.com/@DIEGOFEST" target="_blank">
-            <img src="icons/youtube.png" alt="YouTube">
-          </a>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/ClasesdeRevitBIM" target="_blank" rel="noopener" aria-label="Facebook">
+              <img src="assets/icons/facebook.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.instagram.com/diegofest/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="assets/icons/instagram.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.tiktok.com/@ingenierosx100" target="_blank" rel="noopener" aria-label="TikTok">
+              <img src="assets/icons/tiktok.png" alt="TikTok">
+            </a>
+
+            <a href="https://www.youtube.com/@DIEGOFEST" target="_blank" rel="noopener" aria-label="YouTube">
+              <img src="assets/icons/youtube.png" alt="YouTube">
+            </a>
+          </div>
         </div>
 
-        <div class="profile">
-          <span class="profile-title">PERFIL PROFESIONAL</span>
-          <a
-            class="btn-linkedin"
-            href="https://www.linkedin.com/in/diego-villavicencio-porras-b3aa5313a/"
-            target="_blank"
-          >
-            LinkedIn
+        <div class="social-box">
+          <div class="social-title">PERFIL PROFESIONAL</div>
+          <a class="btn-linkedin" href="https://www.linkedin.com/in/diego-villavicencio-porras-b3aa5313a/" target="_blank" rel="noopener">
+            Linkedin
           </a>
         </div>
       </div>
@@ -68,15 +65,14 @@
     </div>
   </header>
 
-  <!-- ================= SERVICIOS ================= -->
-  <main class="container">
+  <!-- CONTENIDO -->
+  <main class="container main">
 
     <section>
-      <h2>SERVICIOS</h2>
+      <h2 class="section-title">SERVICIOS</h2>
 
       <div class="grid">
-
-        <div class="card">
+        <article class="card">
           <h3>Clases particulares de Revit</h3>
           <p>Sesiones personalizadas de 1 a 2 horas, enfocadas en tu proyecto real.</p>
           <ul>
@@ -84,19 +80,19 @@
             <li>Tablas, plantillas y orden</li>
             <li>Buenas prácticas BIM</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <h3>Desarrollo de Scripts en Dynamo para Revit</h3>
-          <p>Automatización para ahorrar tiempo y estandarizar procesos.</p>
+          <p>Automatización para ahorrar tiempo y estandarizar procesos en Revit.</p>
           <ul>
-            <li>Parámetros, hojas y cuantificación</li>
+            <li>Parámetros, hojas, cuantificación</li>
             <li>QA/QC y tareas repetitivas</li>
             <li>Entrega + guía básica</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <h3>Creación de familias paramétricas para Revit</h3>
           <p>Familias optimizadas y parametrizadas para tu flujo BIM.</p>
           <ul>
@@ -104,19 +100,27 @@
             <li>Tipos y control de visibilidad</li>
             <li>Buenas prácticas de rendimiento</li>
           </ul>
-        </div>
-
+        </article>
       </div>
     </section>
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer footer-white">
-    <div class="container">
-      <p>© 2026 DIEGOBIM, todos los derechos reservados.</p>
+  <!-- FOOTER (fondo blanco) -->
+  <footer class="footer">
+    <div class="container footer-wrap">
+      © 2026 DIEGOBIM, todos los derechos reservados.
     </div>
   </footer>
+
+  <script>
+    // WhatsApp (Perú) +51902598128
+    // Mensaje prellenado
+    const phone = "51902598128";
+    const msg = encodeURIComponent("Hola Diego, quiero consultar sobre tus servicios (Revit / Dynamo / Familias).");
+    const waLink = `https://wa.me/${phone}?text=${msg}`;
+    document.getElementById("btnWhatsApp").href = waLink;
+  </script>
 
 </body>
 </html>
