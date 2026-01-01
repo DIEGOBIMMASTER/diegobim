@@ -1,112 +1,238 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>DIEGOBIM | Especialista BIM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+/* ====== Base ====== */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #111;
+}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap" rel="stylesheet">
+/* Contenedor general */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
+/* ====== HERO ====== */
+.hero {
+  background: #000;
+  color: #fff;
+  padding: 26px 0;
+}
 
-<body>
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
 
-<!-- ================= HEADER ================= -->
-<header class="hero">
-  <div class="hero-container">
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
 
-    <!-- LOGO -->
-    <div class="hero-logo">
-      <img src="logo.png" alt="DIEGOBIM Logo">
-    </div>
+/* Columna izquierda (logo) */
+.hero-left {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
 
-    <!-- INFO -->
-    <div class="hero-info">
-      <h1 class="brand">DIEGOBIM</h1>
-      <p class="name">Arq. Diego Villavicencio</p>
-      <p class="role">Especialista BIM</p>
+/* 🔥 CLAVE: limitar tamaño del logo para que NO se agrande */
+.brand-logo {
+  width: 110px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.55));
+}
 
-      <a class="btn-whatsapp"
-         href="https://wa.me/51902598128"
-         target="_blank">
-        Consultar por WhatsApp
-      </a>
-    </div>
+/* Columna centro (texto) */
+.hero-center {
+  flex: 1 1 auto;
+  min-width: 260px;
+}
 
-    <!-- REDES -->
-    <div class="hero-social">
-      <p class="social-title">REDES SOCIALES</p>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/ClasesdeRevitBIM" target="_blank">
-          <img src="assets/icons/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/diegofest/" target="_blank">
-          <img src="assets/icons/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/@ingenierosx100" target="_blank">
-          <img src="assets/icons/tiktok.png" alt="TikTok">
-        </a>
-        <a href="https://www.youtube.com/@DIEGOFEST" target="_blank">
-          <img src="assets/icons/youtube.png" alt="YouTube">
-        </a>
-      </div>
+/* Nota: “Niagara Engraved” no es una fuente web estándar.
+   Si la PC no la tiene, se verá con la alternativa serif. */
+.brand-title {
+  margin: 0 0 8px 0;
+  font-family: "Niagara Engraved", "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
 
-      <p class="social-title">PERFIL PROFESIONAL</p>
-      <a class="btn-linkedin"
-         href="https://www.linkedin.com/in/diego-villavicencio-porras-b3aa5313a/"
-         target="_blank">
-        Linkedin
-      </a>
-    </div>
+.brand-name {
+  margin: 0;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
 
-  </div>
-</header>
+.brand-role {
+  margin: 2px 0 14px 0;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 14px;
+  opacity: 0.9;
+}
 
-<!-- ================= SERVICIOS ================= -->
-<section class="services">
-  <h2>SERVICIOS</h2>
+/* Botón WhatsApp */
+.btn-whatsapp {
+  display: inline-block;
+  background: #22c55e;
+  color: #000;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 14px 26px;
+  border-radius: 999px;
+  box-shadow: 0 10px 26px rgba(34,197,94,0.35);
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.btn-whatsapp:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
 
-  <div class="services-grid">
+/* Columna derecha (redes + linkedin) */
+.hero-right {
+  flex: 0 0 auto;
+  text-align: center;
+  min-width: 240px;
+}
 
-    <div class="card">
-      <h3>Clases particulares de Revit</h3>
-      <p>Sesiones personalizadas de 1 a 2 horas enfocadas en tu proyecto real.</p>
-      <ul>
-        <li>Modelado y documentación</li>
-        <li>Tablas, plantillas y orden</li>
-        <li>Buenas prácticas BIM</li>
-      </ul>
-    </div>
+.block-title {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
 
-    <div class="card">
-      <h3>Desarrollo de Scripts en Dynamo para Revit</h3>
-      <p>Automatización para ahorrar tiempo y estandarizar procesos.</p>
-      <ul>
-        <li>Parámetros, hojas y cuantificación</li>
-        <li>QA/QC y tareas repetitivas</li>
-        <li>Entrega + guía básica</li>
-      </ul>
-    </div>
+/* Íconos */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons a {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.social-icons a:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+.social-icons img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+}
 
-    <div class="card">
-      <h3>Creación de familias paramétricas para Revit</h3>
-      <p>Familias optimizadas y parametrizadas para tu flujo BIM.</p>
-      <ul>
-        <li>Parámetros bien estructurados</li>
-        <li>Tipos y control de visibilidad</li>
-        <li>Buenas prácticas de rendimiento</li>
-      </ul>
-    </div>
+/* Botón Linkedin */
+.btn-linkedin {
+  display: inline-block;
+  background: #0a66c2;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 999px;
+  box-shadow: 0 10px 26px rgba(10,102,194,0.30);
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.btn-linkedin:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
 
-  </div>
-</section>
+/* ====== Sección Servicios ====== */
+.section {
+  padding: 46px 0 30px 0;
+}
+.section-title {
+  margin: 0 0 22px 0;
+  font-size: 28px;
+  letter-spacing: 0.6px;
+  font-weight: 900;
+  color: #0f172a;
+}
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  © 2026 DIEGOBIM, todos los derechos reservados.
-</footer>
+/* Grid de cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
 
-</body>
-</html>
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15,23,42,0.06);
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.card p {
+  margin: 0 0 12px 0;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.card li { margin: 4px 0; }
+
+/* ====== Footer blanco ====== */
+.footer {
+  background: #fff;
+  color: #0f172a;
+  text-align: center;
+  padding: 18px 0;
+  border-top: 1px solid rgba(15,23,42,0.08);
+  font-size: 13px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 980px) {
+  .grid { grid-template-columns: 1fr; }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-right {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-title { font-size: 44px; }
+  .brand-logo { width: 90px; }
+  .social-icons img { width: 34px; height: 34px; }
+  .social-icons a { width: 34px; height: 34px; }
+}
