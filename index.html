@@ -1,238 +1,183 @@
-/* ====== Base ====== */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fb;
-  color: #111;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIEGOBIM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-/* Contenedor general */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 22px;
-}
+<body>
 
-/* ====== HERO ====== */
-.hero {
-  background: #000;
-  color: #fff;
-  padding: 26px 0;
-}
+  <!-- ================= HERO / HEADER ================= -->
+  <header class="hero">
+    <div class="hero-container">
 
-.hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 22px;
+      <!-- LOGO -->
+      <div class="hero-logo">
+        <img src="logo.png" alt="Logo DIEGOBIM">
+      </div>
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 26px;
-}
+      <!-- INFO -->
+      <div class="hero-info">
+        <h1 class="brand">DIEGOBIM</h1>
+        <p class="name">Arq. Diego Villavicencio</p>
+        <p class="role">Especialista BIM</p>
 
-/* Columna izquierda (logo) */
-.hero-left {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-}
+        <!-- WhatsApp (ajusta tu número real) -->
+        <a class="btn-whatsapp" href="https://wa.me/51999999999" target="_blank" rel="noopener">
+          Consultar por WhatsApp
+        </a>
+      </div>
 
-/* 🔥 CLAVE: limitar tamaño del logo para que NO se agrande */
-.brand-logo {
-  width: 110px;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.55));
-}
+      <!-- REDES -->
+      <div class="hero-social">
+        <div class="social-title">REDES SOCIALES</div>
 
-/* Columna centro (texto) */
-.hero-center {
-  flex: 1 1 auto;
-  min-width: 260px;
-}
+        <div class="social-icons">
+          <!-- Ajusta links -->
+          <a href="https://facebook.com" target="_blank" rel="noopener">
+            <img src="icons/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener">
+            <img src="icons/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener">
+            <img src="icons/tiktok.png" alt="TikTok">
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">
+            <img src="icons/youtube.png" alt="YouTube">
+          </a>
+        </div>
 
-/* Nota: “Niagara Engraved” no es una fuente web estándar.
-   Si la PC no la tiene, se verá con la alternativa serif. */
-.brand-title {
-  margin: 0 0 8px 0;
-  font-family: "Niagara Engraved", "Times New Roman", serif;
-  font-weight: 700;
-  font-size: 56px;
-  letter-spacing: 1px;
-  line-height: 1;
-}
+        <div class="social-title">PERFIL PROFESIONAL</div>
+        <a class="btn-linkedin" href="https://linkedin.com" target="_blank" rel="noopener">Linkedin</a>
+      </div>
 
-.brand-name {
-  margin: 0;
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-}
+    </div>
 
-.brand-role {
-  margin: 2px 0 14px 0;
-  font-family: "Century Gothic", Arial, sans-serif;
-  font-size: 14px;
-  opacity: 0.9;
-}
+    <!-- ================= MENU PRINCIPAL ================= -->
+    <nav class="main-nav">
+      <a class="home-link" href="https://diegobimmaster.github.io/diegobim/">Menú Principal</a>
+      <a href="#archivos">Archivos</a>
+      <a href="#software">Software</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#acerca">Acerca de mi</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-/* Botón WhatsApp */
-.btn-whatsapp {
-  display: inline-block;
-  background: #22c55e;
-  color: #000;
-  text-decoration: none;
-  font-weight: 800;
-  padding: 14px 26px;
-  border-radius: 999px;
-  box-shadow: 0 10px 26px rgba(34,197,94,0.35);
-  transition: transform 0.12s ease, filter 0.12s ease;
-}
-.btn-whatsapp:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.02);
-}
+  <!-- ================= ARCHIVOS ================= -->
+  <section id="archivos" class="section container">
+    <h2 class="section-title">Archivos</h2>
 
-/* Columna derecha (redes + linkedin) */
-.hero-right {
-  flex: 0 0 auto;
-  text-align: center;
-  min-width: 240px;
-}
+    <div class="files-grid">
+      <article class="file-card">
+        <h3>Estándar BIM para proyectos públicos</h3>
+        <p>Según el PlanBIM</p>
+        <a class="btn-download" href="docs/Estandar-BIM.pdf" download>Descargar archivo</a>
+      </article>
 
-.block-title {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.8px;
-  opacity: 0.9;
-  margin-bottom: 10px;
-}
+      <article class="file-card">
+        <h3>Manual de Librerías Revit</h3>
+        <p>PAVCO Wavin Perú</p>
+        <a class="btn-download" href="docs/Manual-Librerias-BIM-Pavco-Wavin.pdf" download>Descargar archivo</a>
+      </article>
+    </div>
+  </section>
 
-/* Íconos */
-.social-icons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-.social-icons a {
-  display: inline-flex;
-  width: 38px;
-  height: 38px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  transition: transform 0.12s ease, filter 0.12s ease;
-}
-.social-icons a:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.05);
-}
-.social-icons img {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  display: block;
-}
+  <!-- ================= SOFTWARE ================= -->
+  <section id="software" class="section container">
+    <h2 class="section-title">Software</h2>
 
-/* Botón Linkedin */
-.btn-linkedin {
-  display: inline-block;
-  background: #0a66c2;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 800;
-  padding: 10px 20px;
-  border-radius: 999px;
-  box-shadow: 0 10px 26px rgba(10,102,194,0.30);
-  transition: transform 0.12s ease, filter 0.12s ease;
-}
-.btn-linkedin:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.03);
-}
+    <div class="soft-card">
+      <p>
+        (Aquí colocaremos tu lista de software: Revit, Dynamo, Navisworks, etc.
+        Si me dices tu lista exacta lo dejo listo con tarjetas e íconos.)
+      </p>
+    </div>
+  </section>
 
-/* ====== Sección Servicios ====== */
-.section {
-  padding: 46px 0 30px 0;
-}
-.section-title {
-  margin: 0 0 22px 0;
-  font-size: 28px;
-  letter-spacing: 0.6px;
-  font-weight: 900;
-  color: #0f172a;
-}
+  <!-- ================= SERVICIOS ================= -->
+  <section id="servicios" class="section container">
+    <h2 class="section-title">Servicios</h2>
 
-/* Grid de cards */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
+    <div class="services-grid">
+      <div class="card">
+        <h3>Clases particulares de Revit</h3>
+        <p>Sesiones personalizadas de 1 a 2 horas enfocadas en tu proyecto real.</p>
+        <ul>
+          <li>Modelado y documentación</li>
+          <li>Tablas, plantillas y orden</li>
+          <li>Buenas prácticas BIM</li>
+        </ul>
+      </div>
 
-.card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 18px 18px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  border: 1px solid rgba(15,23,42,0.06);
-}
+      <div class="card">
+        <h3>Desarrollo de Scripts en Dynamo para Revit</h3>
+        <p>Automatización para ahorrar tiempo y estandarizar procesos.</p>
+        <ul>
+          <li>Parámetros, hojas y cuantificación</li>
+          <li>QA/QC y tareas repetitivas</li>
+          <li>Entrega + guía básica</li>
+        </ul>
+      </div>
 
-.card h3 {
-  margin: 0 0 10px 0;
-  font-size: 16px;
-  font-weight: 900;
-  color: #0f172a;
-}
+      <div class="card">
+        <h3>Creación de familias paramétricas para Revit</h3>
+        <p>Familias optimizadas y parametrizadas para tu flujo BIM.</p>
+        <ul>
+          <li>Parámetros bien estructurados</li>
+          <li>Tipos y control de visibilidad</li>
+          <li>Buenas prácticas de rendimiento</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-.card p {
-  margin: 0 0 12px 0;
-  color: #334155;
-  font-size: 13px;
-  line-height: 1.45;
-}
+  <!-- ================= ACERCA DE MI ================= -->
+  <section id="acerca" class="section container">
+    <h2 class="section-title">Acerca de mi</h2>
 
-.card ul {
-  margin: 0;
-  padding-left: 18px;
-  color: #334155;
-  font-size: 13px;
-  line-height: 1.6;
-}
-.card li { margin: 4px 0; }
+    <div class="about">
+      <p>
+        Arquitecto con una sólida trayectoria enfocada en la metodología BIM, acumulando más de 10 años de experiencia profesional trabajando con esta metodología aplicada a proyectos reales. Dominas de manera avanzada el software Autodesk Revit, el cual utilizas no solo como herramienta de modelado, sino como una plataforma integral para la gestión, coordinación y optimización de proyectos.
+      </p>
 
-/* ====== Footer blanco ====== */
-.footer {
-  background: #fff;
-  color: #0f172a;
-  text-align: center;
-  padding: 18px 0;
-  border-top: 1px solid rgba(15,23,42,0.08);
-  font-size: 13px;
-}
+      <p>
+        A lo largo de tu carrera, te has especializado en automatización de procesos mediante Dynamo, desarrollando scripts personalizados que resuelven problemas concretos de producción, optimizan tiempos y mejoran la eficiencia de los flujos de trabajo BIM. Este enfoque te ha llevado a concebir tus desarrollos como soluciones técnicas, más que como simples scripts, con una clara orientación a la productividad y al valor para equipos y empresas.
+      </p>
 
-/* ====== Responsive ====== */
-@media (max-width: 980px) {
-  .grid { grid-template-columns: 1fr; }
+      <p>
+        Además de tu experiencia profesional, has tenido un rol activo en la formación y capacitación, siendo instructor de Revit en instituciones reconocidas como CAPECO y Estrucad, donde has transmitido conocimientos técnicos y metodológicos a estudiantes y profesionales del sector construcción, contribuyendo a la difusión y correcta implementación de BIM en el medio local.
+      </p>
 
-  .hero-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+      <p>
+        Actualmente, te encuentras interesado en llevar el uso de Revit y BIM a un siguiente nivel mediante inteligencia artificial, explorando la integración entre automatización, programación y plataformas de IA, con una visión orientada a la innovación, la escalabilidad de soluciones y el futuro de la industria AEC.
+      </p>
+    </div>
+  </section>
 
-  .hero-right {
-    min-width: auto;
-    width: 100%;
-  }
-}
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto" class="section container">
+    <h2 class="section-title">Contacto</h2>
 
-@media (max-width: 480px) {
-  .brand-title { font-size: 44px; }
-  .brand-logo { width: 90px; }
-  .social-icons img { width: 34px; height: 34px; }
-  .social-icons a { width: 34px; height: 34px; }
-}
+    <div class="contact-card">
+      <p>Escríbeme para cotizaciones, clases o automatización BIM:</p>
+
+      <!-- Ajusta tu WhatsApp real -->
+      <a class="btn-whatsapp" href="https://wa.me/51999999999" target="_blank" rel="noopener">
+        Contactar por WhatsApp
+      </a>
+
+      <!-- Si quieres, luego agregamos formulario -->
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    © 2026 DIEGOBIM, todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
