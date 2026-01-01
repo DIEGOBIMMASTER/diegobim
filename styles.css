@@ -1,265 +1,169 @@
-/* =====================
-   RESET BÁSICO
-===================== */
+/* RESET */
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background: #f5f7fb;
-  color: #0f172a;
-  line-height: 1.6;
+  background:#f5f7fb;
+  color:#0f172a;
 }
 
-img{
-  max-width: 100%;
-  display: block;
-}
+img{display:block; max-width:100%;}
 
-/* =====================
-   CONTENEDOR
-===================== */
+/* CONTAINER */
 .container{
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
 }
 
-/* =====================
-   HERO / HEADER
-===================== */
+/* HERO */
 .hero{
-  background: #000;
-  color: #fff;
-  padding: 28px 0;
+  background:#000;
+  color:#fff;
+  padding:28px 0;
 }
 
 .hero-content{
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 24px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:24px;
 }
 
 /* LOGO */
-.logo img{
-  width: 70px;
-  height: auto;
-}
+.logo img{width:70px;}
 
-/* Texto principal */
-.hero-text{
-  text-align: left;
-}
-
+/* TEXT */
 .brand{
-  font-family: "Niagara Engraved", "Niagara Engraved Regular", "Times New Roman", serif;
-  font-weight: 800;
-  letter-spacing: 1px;
-  font-size: 2.8rem;
-  line-height: 1.1;
+  font-family:"Niagara Engraved","Times New Roman",serif;
+  font-size:2.8rem;
+  font-weight:800;
 }
 
-/* Arq. Diego Villavicencio */
 .name{
-  font-family: "Century Gothic", "CenturyGothic", Arial, sans-serif;
-  font-weight: 700;
-  margin-top: 10px;
+  font-family:"Century Gothic",Arial,sans-serif;
+  font-weight:700;
+  margin-top:10px;
 }
 
 .role{
-  font-size: 0.95rem;
-  color: #cbd5f5;
+  color:#cbd5f5;
+  font-size:.95rem;
 }
 
-/* Botón WhatsApp (sin ícono) */
+/* WHATSAPP */
 .btn-whatsapp{
-  display: inline-block;
-  margin-top: 16px;
-  padding: 14px 28px;
-  background: #22c55e;
-  color: #000;
-  font-weight: 900;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 10px 22px rgba(34,197,94,.35);
-  transition: all .2s ease;
+  display:inline-block;
+  margin-top:16px;
+  padding:14px 30px;
+  background:#22c55e;
+  color:#000;
+  font-weight:900;
+  border-radius:999px;
+  text-decoration:none;
+  box-shadow:0 10px 22px rgba(34,197,94,.35);
 }
 
 .btn-whatsapp:hover{
-  background: #16a34a;
-  color: #fff;
+  background:#16a34a;
+  color:#fff;
 }
 
-/* Redes sociales */
-.follow{
-  text-align: right;
-}
-
+/* REDES */
+.follow{text-align:right;}
 .follow span{
-  display: block;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  color: #e5e7eb;
+  font-size:.75rem;
+  letter-spacing:1px;
+  display:block;
+  margin-bottom:8px;
 }
 
-.social{
-  display: flex;
-  gap: 8px;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+.social-icons{
+  display:flex;
+  gap:12px;
+  justify-content:flex-end;
 }
 
-.social a{
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid #333;
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.8rem;
-  transition: background .2s ease;
+.social-icons img{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  transition:.2s;
 }
 
-.social a:hover{
-  background: #111;
+.social-icons img:hover{
+  transform:scale(1.1);
 }
 
-/* Perfil profesional */
-.profile{
-  margin-top: 14px;
-}
-
+/* LINKEDIN */
+.profile{margin-top:14px;}
 .profile-title{
-  display: block;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  color: #e5e7eb;
+  font-size:.75rem;
+  margin-bottom:6px;
+  display:block;
 }
 
-/* Botón LinkedIn */
 .btn-linkedin{
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid #333;
-  background: #0a66c2;
-  color: #fff;
-  font-weight: 800;
-  text-decoration: none;
-  font-size: 0.85rem;
-  transition: transform .2s ease, filter .2s ease;
+  display:inline-block;
+  padding:10px 16px;
+  background:#0a66c2;
+  color:#fff;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
 }
 
-.btn-linkedin:hover{
-  transform: translateY(-1px);
-  filter: brightness(1.05);
-}
-
-/* =====================
-   SECCIONES
-===================== */
-section{
-  padding: 64px 0;
-}
-
+/* SECTIONS */
+section{padding:64px 0;}
 section h2{
-  font-size: 1.8rem;
-  font-weight: 900;
-  margin-bottom: 32px;
-  text-transform: uppercase;
+  font-size:1.8rem;
+  font-weight:900;
+  margin-bottom:32px;
 }
 
-/* =====================
-   GRID SERVICIOS
-===================== */
+/* GRID */
 .grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
 }
 
-/* Cards */
+/* CARD */
 .card{
-  background: #fff;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 12px 28px rgba(15,23,42,.06);
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
 }
 
-.card h3{
-  font-size: 1.1rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.card p{
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-  color: #334155;
-}
-
-.card ul{
-  list-style: none;
-}
-
-.card ul li{
-  padding-left: 16px;
-  margin-bottom: 8px;
-  position: relative;
-  font-size: 0.9rem;
-}
-
+.card h3{margin-bottom:10px;}
+.card p{margin-bottom:10px; color:#334155;}
+.card ul{list-style:none;}
 .card ul li::before{
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #22c55e;
-  font-weight: 900;
+  content:"•";
+  color:#22c55e;
+  margin-right:8px;
 }
 
-/* =====================
-   FOOTER (BLANCO)
-===================== */
-.footer{
-  text-align: center;
-  padding: 24px 0;
-  font-size: 0.85rem;
-}
-
+/* FOOTER */
 .footer-white{
-  background: #fff;
-  color: #0f172a;
-  border-top: 1px solid #e2e8f0;
+  background:#fff;
+  border-top:1px solid #e2e8f0;
+  text-align:center;
+  padding:24px 0;
+  font-size:.85rem;
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 768px){
+/* RESPONSIVE */
+@media(max-width:768px){
   .hero-content{
-    grid-template-columns: 1fr;
-    text-align: center;
+    grid-template-columns:1fr;
+    text-align:center;
   }
-
-  .hero-text{
-    text-align: center;
-  }
-
-  .logo{
-    margin: 0 auto;
-  }
-
-  .follow{
-    text-align: center;
-  }
-
-  .social{
-    justify-content: center;
-  }
+  .follow{text-align:center;}
+  .social-icons{justify-content:center;}
 }
