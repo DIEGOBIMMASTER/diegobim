@@ -45,30 +45,38 @@ img{
   gap: 24px;
 }
 
-/* Logo */
+/* LOGO */
 .logo img{
   width: 70px;
   height: auto;
 }
 
 /* Texto principal */
-.hero-text h1{
-  font-size: 2.4rem;
-  font-weight: 900;
+.hero-text{
+  text-align: left;
+}
+
+.brand{
+  font-family: "Niagara Engraved", "Niagara Engraved Regular", "Times New Roman", serif;
+  font-weight: 800;
   letter-spacing: 1px;
+  font-size: 2.8rem;
+  line-height: 1.1;
 }
 
-.hero-text .name{
+/* Arq. Diego Villavicencio */
+.name{
+  font-family: "Century Gothic", "CenturyGothic", Arial, sans-serif;
   font-weight: 700;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
-.hero-text .role{
+.role{
   font-size: 0.95rem;
   color: #cbd5f5;
 }
 
-/* Botón WhatsApp */
+/* Botón WhatsApp (sin ícono) */
 .btn-whatsapp{
   display: inline-block;
   margin-top: 16px;
@@ -104,6 +112,7 @@ img{
   display: flex;
   gap: 8px;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .social a{
@@ -118,6 +127,38 @@ img{
 
 .social a:hover{
   background: #111;
+}
+
+/* Perfil profesional */
+.profile{
+  margin-top: 14px;
+}
+
+.profile-title{
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: #e5e7eb;
+}
+
+/* Botón LinkedIn */
+.btn-linkedin{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #333;
+  background: #0a66c2;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.btn-linkedin:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.05);
 }
 
 /* =====================
@@ -183,14 +224,18 @@ section h2{
 }
 
 /* =====================
-   FOOTER
+   FOOTER (BLANCO)
 ===================== */
 .footer{
-  background: #000;
-  color: #fff;
   text-align: center;
   padding: 24px 0;
   font-size: 0.85rem;
+}
+
+.footer-white{
+  background: #fff;
+  color: #0f172a;
+  border-top: 1px solid #e2e8f0;
 }
 
 /* =====================
@@ -199,6 +244,10 @@ section h2{
 @media (max-width: 768px){
   .hero-content{
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text{
     text-align: center;
   }
 
