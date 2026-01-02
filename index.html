@@ -1,57 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>DIEGOBIM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIEGOBIM | Especialista BIM</title>
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
-<body>
 
-<!-- ================= HEADER ================= -->
-<header class="hero">
-  <div class="hero-container">
-    <div class="hero-logo">
-      <img src="logo.png" alt="DIEGOBIM">
-    </div>
+<body id="top">
 
-    <div class="hero-info">
-      <h1 class="brand">DIEGOBIM</h1>
-      <p class="name">Arq. Diego Villavicencio</p>
-      <p class="role">Especialista BIM</p>
-      <a class="btn-whatsapp" href="https://wa.me/51999999999" target="_blank">Consultar por WhatsApp</a>
-    </div>
+  <!-- ================= HERO / HEADER ================= -->
+  <header class="hero">
+    <div class="hero-container">
 
-    <div class="hero-social">
-      <div class="social-title">REDES SOCIALES</div>
-      <div class="social-icons">
-        <a href="#"><img src="assets/icons/facebook.png"></a>
-        <a href="#"><img src="assets/icons/instagram.png"></a>
-        <a href="#"><img src="assets/icons/tiktok.png"></a>
-        <a href="#"><img src="assets/icons/youtube.png"></a>
+      <!-- LOGO -->
+      <div class="hero-logo">
+        <img src="logo.png" alt="Logo DIEGOBIM">
       </div>
 
-      <div class="social-title">PERFIL PROFESIONAL</div>
-      <a class="btn-linkedin" href="#" target="_blank">Linkedin</a>
+      <!-- INFO -->
+      <div class="hero-info">
+        <h1 class="brand">DIEGOBIM</h1>
+        <p class="name">Arq. Diego Villavicencio</p>
+        <p class="role">Especialista BIM</p>
+
+        <a class="btn-whatsapp"
+           href="https://wa.me/51999999999"
+           target="_blank"
+           rel="noopener">
+          Consultar por WhatsApp
+        </a>
+      </div>
+
+      <!-- REDES -->
+      <div class="hero-social">
+        <div class="social-title">REDES SOCIALES</div>
+
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noopener">
+            <img src="assets/icons/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener">
+            <img src="assets/icons/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener">
+            <img src="assets/icons/tiktok.png" alt="TikTok">
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener">
+            <img src="assets/icons/youtube.png" alt="YouTube">
+          </a>
+        </div>
+
+        <div class="social-title">PERFIL PROFESIONAL</div>
+        <a class="btn-linkedin"
+           href="https://linkedin.com"
+           target="_blank"
+           rel="noopener">
+          Linkedin
+        </a>
+      </div>
+
     </div>
-  </div>
 
-  <!-- ===== MENU ===== -->
-  <nav class="main-nav">
-    <a href="#" onclick="showHome()">Menú Principal</a>
-    <a href="#" onclick="showArchivos()">Archivos</a>
-    <a href="#" onclick="showServicios()">Servicios</a>
-  </nav>
-</header>
+    <!-- ================= MENÚ NEGRO ================= -->
+    <nav class="main-nav">
+      <div class="nav-left">
+        <a href="index.html#top">Menú Principal</a>
+      </div>
 
-<!-- ================= HOME (NO TOCAR) ================= -->
-<section id="home" class="section">
-  <div class="container">
+      <div class="nav-right">
+        <a href="archivos.html">Archivos</a>
+        <a href="servicios.html">Servicios</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= SECCIÓN SERVICIOS (HOME) ================= -->
+  <section class="section container">
     <h2 class="section-title">Servicios</h2>
 
     <div class="services-grid">
+
       <div class="card">
         <h3>Clases particulares de Revit</h3>
+        <p>Sesiones personalizadas enfocadas en tu proyecto real.</p>
         <ul>
           <li>Modelado y documentación</li>
           <li>Tablas y plantillas</li>
@@ -60,7 +92,8 @@
       </div>
 
       <div class="card">
-        <h3>Desarrollo de Scripts en Dynamo</h3>
+        <h3>Desarrollo de Scripts en Dynamo para Revit</h3>
+        <p>Automatización de procesos BIM.</p>
         <ul>
           <li>Parámetros y hojas</li>
           <li>QA / QC</li>
@@ -70,93 +103,20 @@
 
       <div class="card">
         <h3>Familias paramétricas Revit</h3>
+        <p>Familias optimizadas para rendimiento BIM.</p>
         <ul>
           <li>Parámetros estructurados</li>
           <li>Control de visibilidad</li>
           <li>Buenas prácticas</li>
         </ul>
       </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= SERVICIOS TEXTO ================= -->
-<section id="servicios" class="section hidden">
-  <div class="container">
-    <h2 class="section-title">SERVICIOS</h2>
-
-    <h3>Clases particulares de Revit</h3>
-    <p>Sesiones personalizadas enfocadas en tu proyecto real.</p>
-    <ul>
-      <li>Modelado y documentación</li>
-      <li>Tablas y plantillas</li>
-      <li>Buenas prácticas BIM</li>
-    </ul>
-
-    <h3>Desarrollo de Scripts en Dynamo</h3>
-    <p>Automatización de procesos BIM.</p>
-    <ul>
-      <li>Parámetros y hojas</li>
-      <li>QA / QC</li>
-      <li>Optimización de tiempos</li>
-    </ul>
-
-    <h3>¿Para qué sirve Dynamo?</h3>
-    <iframe width="100%" height="420"
-      src="https://www.youtube.com/embed/GeyHyDuptYY?start=328"
-      frameborder="0" allowfullscreen>
-    </iframe>
-
-    <h3>Familias paramétricas Revit</h3>
-    <ul>
-      <li>Parámetros estructurados</li>
-      <li>Control de visibilidad</li>
-      <li>Buenas prácticas</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= ARCHIVOS ================= -->
-<section id="archivos" class="section hidden">
-  <div class="container">
-    <h2 class="section-title">Archivos</h2>
-
-    <p><strong>Estándar BIM para proyectos públicos</strong></p>
-    <a class="btn-download" href="docs/Estandar-BIM.pdf" target="_blank">Descargar archivo</a>
-
-    <br><br>
-
-    <p><strong>Manual de Librerías Revit – PAVCO Wavin Perú</strong></p>
-    <a class="btn-download" href="docs/Manual-Librerias-BIM-Pavco-Wavin.pdf" target="_blank">Descargar archivo</a>
-  </div>
-</section>
-
-<footer class="footer">
-  © 2026 DIEGOBIM — Todos los derechos reservados
-</footer>
-
-<script>
-function hideAll() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("servicios").style.display = "none";
-  document.getElementById("archivos").style.display = "none";
-}
-
-function showHome() {
-  hideAll();
-  document.getElementById("home").style.display = "block";
-}
-
-function showServicios() {
-  hideAll();
-  document.getElementById("servicios").style.display = "block";
-}
-
-function showArchivos() {
-  hideAll();
-  document.getElementById("archivos").style.display = "block";
-}
-</script>
+  <footer class="footer">
+    © 2026 DIEGOBIM — Todos los derechos reservados
+  </footer>
 
 </body>
 </html>
