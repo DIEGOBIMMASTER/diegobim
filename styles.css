@@ -88,7 +88,7 @@ body {
 }
 
 .social-title {
-  font-size: 10px;      /* MÁS PEQUEÑO */
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.8px;
   opacity: 0.85;
@@ -133,7 +133,7 @@ body {
   font-weight: 800;
 }
 
-/* ===== MENU ===== */
+/* ===== MENU (IZQ / DER BIEN SEPARADO) ===== */
 .main-nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -141,8 +141,7 @@ body {
 
   display: flex;
   align-items: center;
-  justify-content: space-between; /* izquierda y derecha */
-  gap: 18px;
+  justify-content: space-between;
 
   border-top: 1px solid rgba(255,255,255,0.2);
 }
@@ -150,12 +149,7 @@ body {
 .nav-left, .nav-right {
   display: flex;
   align-items: center;
-  gap: 18px;
-}
-
-/* Empuja a la derecha */
-.nav-right {
-  margin-left: auto;
+  gap: 22px;
 }
 
 .main-nav a {
@@ -163,22 +157,10 @@ body {
   font-weight: 900;
   text-decoration: underline;
   opacity: 0.95;
+  white-space: nowrap; /* evita que se junten */
 }
-
 .main-nav a:hover {
   opacity: 1;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .main-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav-right {
-    margin-left: 0;
-  }
 }
 
 /* ===== ARCHIVOS ===== */
@@ -251,6 +233,7 @@ body {
   line-height: 1.6;
 }
 
+/* ===== FOOTER ===== */
 .footer {
   text-align: center;
   padding: 20px;
@@ -277,5 +260,12 @@ body {
 
   .main-nav {
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .nav-left, .nav-right {
+    justify-content: center;
+    width: 100%;
   }
 }
