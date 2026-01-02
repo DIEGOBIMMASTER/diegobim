@@ -135,17 +135,50 @@ body {
 
 /* ===== MENU ===== */
 .main-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px 16px;
+
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between; /* izquierda y derecha */
   gap: 18px;
-  padding: 14px;
+
   border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Empuja a la derecha */
+.nav-right {
+  margin-left: auto;
 }
 
 .main-nav a {
   color: #fff;
   font-weight: 900;
   text-decoration: underline;
+  opacity: 0.95;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-right {
+    margin-left: 0;
+  }
 }
 
 /* ===== ARCHIVOS ===== */
