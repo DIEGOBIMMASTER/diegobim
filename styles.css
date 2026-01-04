@@ -223,3 +223,48 @@ body {
   .main-nav { justify-content: space-between; }
   .nav-left a, .nav-right a { margin-right: 12px; }
 }
+
+/* ================= SERVICIOS (TABS) ================= */
+.service-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 10px;
+  margin-bottom: 22px;
+}
+
+.tab-btn {
+  width: 100%;
+  border: 2px solid #2f4f86;
+  background: #3f6fbe;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tab-btn:hover { filter: brightness(1.03); }
+
+.tab-btn.active {
+  background: #2f5faa;
+  border-color: #1f3f6a;
+}
+
+.service-panel {
+  background: transparent; /* como en tu ejemplo */
+  padding: 6px 0 0;
+}
+
+.service-panel p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+@media (max-width: 980px) {
+  .service-tabs { grid-template-columns: 1fr; }
+}
+

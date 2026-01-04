@@ -4,136 +4,183 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DIEGOBIM | Servicios</title>
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=999" />
 </head>
 
-<body>
+<body id="top">
 
-<div id="top"></div>
+  <!-- ================= HERO / HEADER ================= -->
+  <header class="hero">
+    <div class="hero-container">
 
-<header class="hero">
-  <div class="hero-container">
+      <!-- LOGO -->
+      <div class="hero-logo">
+        <img src="logo.png" alt="Logo DIEGOBIM">
+      </div>
 
-    <div class="hero-logo">
-      <img src="logo.png" alt="Logo DIEGOBIM">
-    </div>
+      <!-- INFO -->
+      <div class="hero-info">
+        <h1 class="brand">DIEGOBIM</h1>
+        <p class="name">Arq. Diego Villavicencio</p>
+        <p class="role">Especialista BIM</p>
 
-    <div class="hero-info">
-      <h1 class="brand">DIEGOBIM</h1>
-      <p class="name">Arq. Diego Villavicencio</p>
-      <p class="role">Especialista BIM</p>
-
-      <a class="btn-whatsapp"
-         href="https://wa.me/51902598128"
-         target="_blank"
-         rel="noopener">
-        Consultar por WhatsApp
-      </a>
-    </div>
-
-    <div class="hero-social">
-      <div class="social-title">REDES SOCIALES</div>
-
-      <div class="social-icons">
-        <a href="https://facebook.com" target="_blank" rel="noopener">
-          <img src="icons/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener">
-          <img src="icons/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://tiktok.com" target="_blank" rel="noopener">
-          <img src="icons/tiktok.png" alt="TikTok">
-        </a>
-        <a href="https://youtube.com" target="_blank" rel="noopener">
-          <img src="icons/youtube.png" alt="YouTube">
+        <!-- IMPORTANTE: id="btnWhatsApp" para que funcione tu script.js -->
+        <a class="btn-whatsapp"
+           id="btnWhatsApp"
+           href="https://wa.me/51902598128"
+           target="_blank"
+           rel="noopener">
+          Consultar por WhatsApp
         </a>
       </div>
 
-      <div class="social-title">PERFIL PROFESIONAL</div>
-      <a class="btn-linkedin"
-         href="https://www.linkedin.com/in/diego-villavicencio-porras-b3aa5313a/"
-         target="_blank"
-         rel="noopener">
-        Linkedin
-      </a>
+      <!-- REDES -->
+      <div class="hero-social">
+        <div class="social-title">REDES SOCIALES</div>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/ClasesdeRevitBIM" target="_blank" rel="noopener">
+            <img src="icons/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/diegofest/" target="_blank" rel="noopener">
+            <img src="icons/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@construccionecd" target="_blank" rel="noopener">
+            <img src="icons/tiktok.png" alt="TikTok">
+          </a>
+          <a href="https://www.youtube.com/@DIEGOFEST" target="_blank" rel="noopener">
+            <img src="icons/youtube.png" alt="YouTube">
+          </a>
+        </div>
+
+        <div class="social-title">PERFIL PROFESIONAL</div>
+        <a class="btn-linkedin"
+           href="https://www.linkedin.com/in/diego-villavicencio-porras-b3aa5313a/"
+           target="_blank"
+           rel="noopener">
+          Linkedin
+        </a>
+      </div>
+
     </div>
 
-  </div>
+    <!-- ================= MENÚ NEGRO ================= -->
+    <nav class="main-nav">
+      <div class="nav-left">
+        <!-- IMPORTANTE: para volver a https://diegobimmaster.github.io/diegobim/ -->
+        <a href="./">Menú Principal</a>
+      </div>
 
-  <nav class="main-nav">
-    <div class="nav-left">
-      <a href="./">Menú Principal</a>
+      <div class="nav-right">
+        <a href="archivos.html">Archivos</a>
+        <a href="software.html">Software</a>
+        <a class="active" href="servicios.html">Servicios</a>
+        <a href="acerca.html">Acerca de mi</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= CONTENIDO SERVICIOS (TABS) ================= -->
+  <section class="section container">
+    <h2 class="section-title">Servicios</h2>
+
+    <!-- BOTONES (TABS) -->
+    <div class="service-tabs">
+      <button class="tab-btn active" data-tab="revit">CLASES DE REVIT</button>
+      <button class="tab-btn" data-tab="dynamo">DYNAMO PARA REVIT</button>
+      <button class="tab-btn" data-tab="familias">FAMILIAS PARA REVIT</button>
     </div>
 
-    <div class="nav-right">
-      <a href="archivos.html">Archivos</a>
-      <a href="software.html">Software</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="acerca.html">Acerca de mi</a>
-      <a href="contacto.html">Contacto</a>
+    <!-- CONTENIDO -->
+    <div class="service-panel">
+
+      <div class="tab-content" id="tab-revit">
+        <p><b>Bienvenidos al curso de Revit con metodología BIM.</b></p>
+
+        <p>
+          Revit no es solo un programa para dibujar en 3D, es una <b>herramienta de gestión de información del proyecto</b>.
+          Todo lo que modelamos tiene datos, y esos datos nos permiten tomar mejores decisiones durante el diseño,
+          la coordinación y la construcción.
+        </p>
+
+        <p>
+          En este curso no vamos a aprender botones sin sentido. Vamos a entender <b>cómo piensa Revit</b>, cómo se estructura un modelo BIM y
+          cómo trabajar de forma ordenada y profesional, tal como se hace en proyectos reales.
+        </p>
+
+        <p>
+          Aprenderemos a modelar correctamente, a crear familias útiles, a manejar vistas, planos, metrados y tablas,
+          y a coordinar la información para reducir errores y retrabajos.
+        </p>
+
+        <p>
+          El objetivo es que al terminar el curso ustedes no solo sepan usar Revit, sino que <b>trabajen como BIM</b>,
+          optimizando tiempos, mejorando la calidad del proyecto y aumentando su valor profesional en el mercado.
+        </p>
+      </div>
+
+      <div class="tab-content" id="tab-dynamo" style="display:none;">
+        <p>
+          Ofrezco <b>soluciones automatizadas con Dynamo para Revit</b> orientadas a optimizar procesos BIM,
+          reducir tiempos de modelado y minimizar errores repetitivos en proyectos arquitectónicos y de construcción.
+        </p>
+
+        <p>
+          Mediante el uso de programación visual, desarrollo flujos de trabajo personalizados que permiten
+          <b>automatizar tareas</b>, estandarizar modelos, mejorar la calidad de la información y aumentar la productividad del equipo.
+        </p>
+
+        <p>
+          Estas soluciones están enfocadas en necesidades reales de proyecto: generación y control de parámetros,
+          creación y modificación masiva de elementos, control de calidad del modelo, metrados automáticos y
+          preparación de entregables BIM.
+        </p>
+
+        <p>
+          Mi enfoque no es entregar scripts genéricos, sino <b>resolver problemas específicos del proyecto</b>,
+          adaptando cada solución al flujo de trabajo del cliente y a sus estándares BIM.
+        </p>
+
+        <p>
+          Dynamo se convierte así en una herramienta estratégica para llevar el uso de Revit a un nivel avanzado y competitivo.
+        </p>
+      </div>
+
+      <div class="tab-content" id="tab-familias" style="display:none;">
+        <p>
+          Ofrezco el <b>desarrollo de familias paramétricas en Revit</b>, diseñadas para responder a estándares BIM y a las
+          necesidades reales de cada proyecto.
+        </p>
+
+        <p>
+          Las familias se crean con una correcta estructura paramétrica, permitiendo <b>flexibilidad geométrica</b>,
+          control de información y un comportamiento consistente en el modelo.
+        </p>
+
+        <p>
+          Esto garantiza modelos más livianos, ordenados y confiables para documentación, metrados y coordinación.
+        </p>
+
+        <p>
+          Cada familia incluye parámetros bien definidos, niveles de detalle adecuados y una lógica de uso clara,
+          facilitando su reutilización en distintos proyectos y etapas de diseño.
+        </p>
+
+        <p>
+          El objetivo no es solo modelar objetos, sino <b>crear componentes inteligentes</b>, alineados con flujos de trabajo profesionales,
+          que reduzcan errores, mejoren la productividad y eleven la calidad del modelo BIM.
+        </p>
+      </div>
+
     </div>
-  </nav>
-</header>
+  </section>
 
-<!-- CONTENIDO -->
-<section class="section container">
+  <footer class="footer">
+    © <span id="year">2026</span> DIEGOBIM — Todos los derechos reservados
+  </footer>
 
-  <h2 class="section-title section-title--upper">SERVICIOS</h2>
-
-  <!-- Servicio 1 -->
-  <div class="service-block">
-    <h3>Clases particulares de Revit</h3>
-    <p>Sesiones personalizadas enfocadas en tu proyecto real.</p>
-    <ul>
-      <li>Modelado y documentación</li>
-      <li>Tablas, plantillas y orden</li>
-      <li>Buenas prácticas BIM</li>
-    </ul>
-  </div>
-
-  <div class="service-divider"></div>
-
-  <!-- Servicio 2 -->
-  <div class="service-block">
-    <h3>Desarrollo de Scripts en Dynamo para Revit</h3>
-    <p>Automatización para ahorrar tiempo y estandarizar procesos.</p>
-    <ul>
-      <li>Parámetros, hojas y cuantificación</li>
-      <li>QA/QC y tareas repetitivas</li>
-      <li>Entrega + guía básica</li>
-    </ul>
-
-    <h4 class="service-subtitle">¿Para qué sirve Dynamo?</h4>
-
-    <div class="video-wrap">
-      <iframe
-        src="https://www.youtube.com/embed/GeyHyDuptYY?start=328"
-        title="¿Para qué sirve Dynamo?"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-
-  <div class="service-divider"></div>
-
-  <!-- Servicio 3 -->
-  <div class="service-block">
-    <h3>Creación de familias paramétricas para Revit</h3>
-    <p>Familias optimizadas y parametrizadas para tu flujo BIM.</p>
-    <ul>
-      <li>Parámetros bien estructurados</li>
-      <li>Tipos y control de visibilidad</li>
-      <li>Buenas prácticas de rendimiento</li>
-    </ul>
-  </div>
-
-</section>
-
-<footer class="footer">
-  © 2026 DIEGOBIM — Todos los derechos reservados
-</footer>
-
+  <!-- IMPORTANTE: tu JS debe estar cargado -->
+  <script src="script.js"></script>
 </body>
 </html>
