@@ -268,3 +268,19 @@ body {
   .service-tabs { grid-template-columns: 1fr; }
 }
 
+/* ================= LINK MAS INFORMACION ================= */
+.more-services {
+  margin-top: 18px;
+}
+
+.more-services a {
+  font-size: 14px;
+  font-weight: 900;
+  color: #0f172a;
+  text-decoration: underline;
+}
+
+.more-services a:hover {
+  opacity: 0.75;
+}
+
